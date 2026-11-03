@@ -10,7 +10,7 @@ cask "faradaiwire" do
   desc "Zero-trust security gateway for AI agents & MCP"
   homepage "https://github.com/FaradAiLab/FaradAiWire"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   binary "faradaiwire"
 
