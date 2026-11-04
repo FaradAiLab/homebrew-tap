@@ -1,21 +1,21 @@
 class Faradaiwire < Formula
   desc "Zero-trust security gateway for AI agents & MCP"
   homepage "https://github.com/FaradAiLab/FaradAiWire"
-  version "1.0.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_darwin_arm64.tar.gz"
-      sha256 "c47dafcc766795b1f68676fb9fe0c653137d9b4e6f40927f2d842f5de9f4d6c1"
+      sha256 "dbdd3ae2112f04c6b3e3057106b0d9740985b6a182c37716d9ec278b64ef1619"
     else
       url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_darwin_amd64.tar.gz"
-      sha256 "2c8ee50bc3d4aff2ba9b13a0f40b1034da692d4ea70e94bc63e4d1c7d579ee5b"
+      sha256 "d62b0491173be5b562ffcdce5985f9a4fb3c7774572206330ffb1ccdc4f094d5"
     end
   end
 
   on_linux do
     url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_linux_amd64.tar.gz"
-    sha256 "3e19e1affe4d3f622fae0e833ed82238780bf7b7d97f419173e3915e64c69dd5"
+    sha256 "802c8071894605e09a767d6386bb069c41f3d83d1c37edf6dd15dcf7db03eabc"
   end
 
   def install
@@ -35,3 +35,4 @@ class Faradaiwire < Formula
     system "#{bin}/faradaiwire", "--help"
   end
 end
+
