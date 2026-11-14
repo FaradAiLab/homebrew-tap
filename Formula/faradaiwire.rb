@@ -1,21 +1,26 @@
 class Faradaiwire < Formula
   desc "Zero-trust security gateway for AI agents & MCP"
   homepage "https://github.com/FaradAiLab/FaradAiWire"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_darwin_arm64.tar.gz"
-      sha256 "e6d72e7ba776ff657e445f755320689de39162197dd2c3a76a66524bed0c5b55"
+      sha256 "c7be28e8d777db64205786e89be1fdb44e92f8ca9a103dcae2ac7000f6d2e410"
     else
       url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_darwin_amd64.tar.gz"
-      sha256 "bf198afed4a5a3bbec230108e021a8c3513d6277bac7a1c113458c7a3cd78369"
+      sha256 "395cfc21e51a38c01c1ccb3124f9b305b5ff1e57e1b4046751239ba8efce9b25"
     end
   end
 
   on_linux do
-    url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_linux_amd64.tar.gz"
-    sha256 "20226ad8441e1304f69c4334058f0fa577faf7eaa46c7a5c2092de4c8eadaebd"
+    if Hardware::CPU.arm?
+      url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_linux_arm64.tar.gz"
+      sha256 "5c63727bfa61b0d00649b7d4d42fc130da27a5ad46a542ad47e60119c596dd6c"
+    else
+      url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_linux_amd64.tar.gz"
+      sha256 "7db8847d17eb348775f5a95004b36abf5643a54ae68a6794940b1676be10e818"
+    end
   end
 
   def install
@@ -24,7 +29,7 @@ class Faradaiwire < Formula
 
   # macOS Background Daemon Service (launchd)
   service do
-    run [opt_bin/"faradaiwire"]
+    run [opt_bin/"faradaiwire", "run"]
     keep_alive true
     log_path var/"log/faradaiwire.log"
     error_log_path var/"log/faradaiwire.error.log"
