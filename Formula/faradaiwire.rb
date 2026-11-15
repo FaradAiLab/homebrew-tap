@@ -6,20 +6,20 @@ class Faradaiwire < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_darwin_arm64.tar.gz"
-      sha256 "c7be28e8d777db64205786e89be1fdb44e92f8ca9a103dcae2ac7000f6d2e410"
+      sha256 "80435cab246d96d6778da83b2b979150c823786ce4027b979adc73a6d99eba9d"
     else
       url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_darwin_amd64.tar.gz"
-      sha256 "395cfc21e51a38c01c1ccb3124f9b305b5ff1e57e1b4046751239ba8efce9b25"
+      sha256 "65ab86c945ae13a2f518c98c36f36bb5386fe276071ff379112ea8a3978c4b37"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_linux_arm64.tar.gz"
-      sha256 "5c63727bfa61b0d00649b7d4d42fc130da27a5ad46a542ad47e60119c596dd6c"
+      sha256 "86e7fdf0afea80ac2bbe2999c4923f8ad9618dd7e1c23034d6c4cb92e99b4a18"
     else
       url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_linux_amd64.tar.gz"
-      sha256 "7db8847d17eb348775f5a95004b36abf5643a54ae68a6794940b1676be10e818"
+      sha256 "f265d0b598b1e0a22b6fa9c7a4535ca1ffcad6a3caf41321592c15d6530c91c0"
     end
   end
 
