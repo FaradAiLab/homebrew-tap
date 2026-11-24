@@ -1,17 +1,17 @@
 cask "faradaiwire" do
-  version "0.1.6"
+  version "0.1.7"
 
   on_macos do
     depends_on macos: :monterey
 
     on_arm do
       url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_darwin_arm64.tar.gz"
-      sha256 "30fd6cfc099656019ab403548adba2cf73ba3e40183a86f067bf050fd0759f34"
+      sha256 "a4e2f898d1345a3dbc781e06cd87c0f63a1aa387d0438aee652fa7107a458547"
     end
 
     on_intel do
       url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_darwin_amd64.tar.gz"
-      sha256 "1bf3dbcd718ccc59023adf244464553f006d20b82ef31cb7d833d30ad7b93571"
+      sha256 "e69078749ae7f43149b3eafe62f2900321658ca1439760ed7dddaecca7e0b41d"
     end
 
     postflight do
@@ -24,12 +24,12 @@ cask "faradaiwire" do
   on_linux do
     on_arm do
       url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_linux_arm64.tar.gz"
-      sha256 "4295de7caaedac38e99f68fa81f8b7e3d1f5ae3b28208791b661e1ed93f748c6"
+      sha256 "0dc4c4c91e5c0953d70ed63539f41c1f0d9381de6a157f654cd73958bc1c2494"
     end
 
     on_intel do
       url "https://github.com/FaradAiLab/FaradAiWire/releases/download/v#{version}/faradaiwire_#{version}_linux_amd64.tar.gz"
-      sha256 "699ba55d75b9dd644d22792025779c14810dc5314baa0b0b78185b36eb960491"
+      sha256 "170296adb9d08b4b9724703803c944901100bf405aa810550637c3c01548ba8a"
     end
   end
 
